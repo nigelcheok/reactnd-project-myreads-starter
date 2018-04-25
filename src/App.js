@@ -45,7 +45,7 @@ class BooksApp extends Component {
               </div>
           )}/>
           <Route path='/search' render={({history}) => (
-              <SearchBooks onBookIsUpdated={this.bookIsUpdated}/>
+              <SearchBooks onBookIsUpdated={this.bookIsUpdated} allBooks={this.state.books}/>
           )}/>
       </div>
 

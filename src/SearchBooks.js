@@ -57,6 +57,7 @@ class SearchBooks extends Component {
                                     image={ book.imageLinks ?  book.imageLinks.smallThumbnail : ''}
                                     id={book.id}
                                     onBookIsUpdated={this.bookIsUpdated}
+                                    shelf={ this.props.allBooks.map(b => b.id).includes(book.id) ? this.props.allBooks.filter(b => b.id === book.id)[0].shelf : 'none'}
                                 />
                             </li>
                         )}
